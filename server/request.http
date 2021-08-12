@@ -1,0 +1,57 @@
+GET  http://localhost:5656
+###
+POST http://localhost:5656/api/auth/register
+Content-Type: application/json
+
+{
+    "username": "truong12",
+    "password":"123"
+
+}
+###
+POST http://localhost:5656/api/auth/login
+Content-Type: application/json
+
+{
+    "username": "truong",
+    "password":"123"
+
+}
+
+###
+GET  http://localhost:5656/api/auth/
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOiI2MTBmNjhlMmZhY2JmNTU1MGM5MzQxOGMiLCJpYXQiOjE2Mjg0MTA2NjV9.MkF2pzTlSLVz58sjO8IeC4eNbBn3GsRPXcxsn0wjxzc
+###
+GET  http://localhost:5656/api/post/
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOiI2MTBmNjhlMmZhY2JmNTU1MGM5MzQxOGMiLCJpYXQiOjE2Mjg0MTA2NjV9.MkF2pzTlSLVz58sjO8IeC4eNbBn3GsRPXcxsn0wjxzc
+
+
+
+###
+POST  http://localhost:5656/api/post/
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOiI2MTBmNjhlMmZhY2JmNTU1MGM5MzQxOGMiLCJpYXQiOjE2Mjg0MTA2NjV9.MkF2pzTlSLVz58sjO8IeC4eNbBn3GsRPXcxsn0wjxzc
+Content-Type: application/json
+
+{
+    "title": "Lập trình nodejs",
+    "description":"Khóa học bổ ích",
+    "url":"",
+    "status":"LEARNED"
+}
+
+###
+PUT http://localhost:5656/api/post/updatePost/610faaf193874c5ec0976941
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOiI2MTBmNjhlMmZhY2JmNTU1MGM5MzQxOGMiLCJpYXQiOjE2Mjg0MTA2NjV9.MkF2pzTlSLVz58sjO8IeC4eNbBn3GsRPXcxsn0wjxzc
+Content-Type: application/json
+
+{
+    "title": "Lập trình nodejs",
+    "descripton":"Khóa học bổ ích",
+    "url":"https://www.youtube.com/watch?v=qSJky2QykM8&list=RDGMEMQ1dJ7wXfLlqCjwV0xfSNbA&index=3",
+    "status":""
+}
+
+
+###
+DELETE  http://localhost:5656/api/post/Deletepost/610faaf193874c5ec0976941
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOiI2MTBmNjhlMmZhY2JmNTU1MGM5MzQxOGMiLCJpYXQiOjE2Mjg0MTA2NjV9.MkF2pzTlSLVz58sjO8IeC4eNbBn3GsRPXcxsn0wjxzc
