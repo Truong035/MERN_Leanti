@@ -102,10 +102,9 @@ const Deletepost=async _id=>{
         const response= await axios.delete(`${apiURL}/post/Deletepost/${_id}`)
   
   if(response.data.success){
-            
-  
+        
     postState.posts=postState.posts.filter(post => post._id !==_id)
-    console.log( postState.posts);
+ 
   }
   return response.data
     } catch (error) {

@@ -107,7 +107,7 @@ router.delete('/Deletepost/:id',verifyToken,async(req,res)=>{
      const deletePost=await Post.findByIdAndDelete(DeleteportCondition);
      if(!deletePost){
         return res.status(400).json({
-            success :false,
+                 success :false,
             message :"User not authorised or post not found"
    
         })
